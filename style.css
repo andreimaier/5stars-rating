@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+:root {
+--Orange: hsl(25, 97%, 53%);
+--White: hsl(0, 0%, 100%);
+--Light-Grey: hsl(217, 12%, 63%);
+--Medium-Grey: hsl(216, 12%, 54%);
+--Dark-Blue: hsl(213, 19%, 18%);
+--Very-Dark-Blue: hsl(216, 12%, 8%);
+--bubble: #2d363f;
+--container: #1f2630;
+} 
+body {
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--Very-Dark-Blue);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-block: 1.8rem;
+    padding-inline: 1.2em;
+    width: 333px;
+    margin-top: 155px;
+    margin-inline: auto;
+    border-radius: 20px;
+    background-color: var(--container);
+    transition: 400ms, ease-in-out; 
+}
+.img {
+    width: 3rem;
+    border-radius: 50%;
+    padding: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0rem;
+    background-color: var(--bubble);
+    
+}
+h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    color: var(--White);
+
+}
+.text {
+    color: var(--Light-Grey);
+    font-size: 15px;
+    line-height: 1.5rem;
+}
+.select {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 0.8rem;
+    padding-bottom: 0.6rem;
+}
+.select button {
+    display: flex;
+    padding-block: 1rem;
+    padding-inline: 1.2rem;
+    border: none;
+    font-weight: 700;
+    color: var(--Light-Grey);
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--bubble);
+    transition: 0.3s ease-in-out;
+}
+.select button:hover {
+    cursor: pointer;
+    color: var(--White);
+    background-color: var(--Orange);
+}
+.select button:focus {
+    color: var(--White);
+    background-color: var(--Light-Grey);
+}
+#submit {
+    font-weight: 700;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: var(--White);
+    background-color: var(--Orange);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+#submit:hover {
+    color: var(--Orange);
+    background-color: var(--White);
+}
+#thank-you {
+    display: none;
+    padding-inline: 0.8rem;
+    padding-bottom: 3rem;
+    transform: scale(0);
+    transition: 700ms ease;
+}
+.img2 {
+   width: 150px;
+   margin: 8px auto 0;
+}
+#thank-you h1 {
+    text-align: center;
+}
+.text2 {
+    text-align: center;
+    padding-inline: 0.6rem;
+}
+#result {
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin: 10px auto;
+    color: var(--Orange);
+    background-color: var(--bubble);
+
+}
+
+
+@media screen and (min-width:1300px) {
+    .container {
+        width: 400px;
+        padding-inline: 1.4rem;
+        
+    }
+    #submit {
+        width: 95%;
+    }
+    .select {
+        padding-bottom: 1.2rem;
+    }
+    .select button {
+        display: flex;
+        padding-block: 1rem;
+        padding-inline: 1.2rem;
+        border: none;
+    }
+}
